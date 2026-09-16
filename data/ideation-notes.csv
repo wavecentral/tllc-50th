@@ -1,0 +1,72 @@
+id,panel,zone,cluster,idea,detail,purple_votes,red_votes,total_score,text_confidence,confidence_band,confidence_note,note_color,source_photo,merged_from,merged_with,flags
+PA-01,Past,Ballroom,Program & Speakers,Former Pastors Speak,,3,1,7,96,Certain,,yellow (red ink),past_20260908_181435,,,"Dot cluster shared with PA-02; both are Ballroom, so the split matters less. Its red dot photographed the least washed-out of the three, but see PA-03."
+PA-02,Past,Ballroom,Program & Speakers,Special Short Speeches from Guests,"ex: CeCee Mills, Pastors, Presidents",0,0,0,100,Confirmed,Confirmed by Mark against the physical note,yellow,past_20260908_181435,,,Headline confirmed; the example names on the second line ('CeCee Mills') were not part of that check.
+PA-03,Past,Welcome,Program & Speakers,Introduce pastors from past,,0,1,4,94,Certain,,purple,past_20260908_181435,,,Its dot is pale from the flash and I read it as red — but I made exactly that call on FU-02 and was wrong. Worth checking whether this is purple too.
+PA-04,Past,Ballroom,Video & Media,Video Presentation of our Ministries — Past,,3,0,3,95,Certain,,yellow,past_20260908_181417,,,Ballroom cut of the ministries video; PA-20 is the Grounds cut.
+PA-05,Past,Rooms,Games,Timeline Game,Guess when the event took place,3,0,3,92,Certain,,blue,past_20260908_181420,,,"Contested dots now cross zones — Timeline Game is Rooms, PA-06 is Ballroom. The attribution matters."
+PA-06,Past,Ballroom,Games,Computer game w/ timeline questions,signed 'R—',0,0,0,80,High,Red ink on yellow; a trailing signature ('R—') I couldn't resolve,yellow (red ink),past_20260908_181420,,,May claim dots from PA-05 — but that would move them from Rooms to Ballroom.
+PA-07,Past,Grounds,Time Capsule,Open 25th Time Capsule,,2,1,6,95,Certain,,green,past_20260908_181424,PA-07 + PA-08,Open Time Capsule,"Merged with PA-08 — the same idea written twice. Both were Grounds / Honor the Past, so nothing is in tension."
+PA-10,Past,Welcome,Food & Drink,Signature Golden Cocktail,,1,0,1,88,High,Read at zoom but the note sits in shadow,purple,past_20260908_181431,,,
+PA-11,Past,Rooms,Displays,Table of Remembrance Items,,1,0,1,93,Certain,,blue,past_20260908_181428,,,
+PA-12,Past,Welcome,Photos & Memory,Polaroid Guest books,"3 or 4 cameras — paste a photo, write a line (marked 'HP')",1,0,1,85,High,Longest note on the panel; the 'HP' mark at the top is unexplained,purple,past_20260908_181424,,,
+PA-13,Past,Rooms,Displays,Historical Displays / Artifacts,,0,0,0,90,Certain,,blue,past_20260908_181431,,,
+PA-14,Past,Rooms,Displays,Display history,,0,0,0,92,Certain,,blue,past_20260908_181425,,,
+PA-15,Past,Ballroom,Displays,Display tables by decade,,0,0,0,92,Certain,,yellow,past_20260908_181417,,,
+PA-16,Past,Welcome,Displays,Display on piano,,0,0,0,94,Certain,,purple,past_20260908_181424,,,
+PA-17,Past,Welcome,Displays,Portraits of our Pastors over the years,,0,0,0,92,Certain,,purple,past_20260908_181424,,,
+PA-18,Past,Ballroom,Displays,Extra cookbooks for sale display,,0,0,0,88,High,Small writing; 'for sale' read at the edge of legibility,yellow,past_20260908_181417,,,
+PA-19,Past,Rooms,Video & Media,Historical Video Running,,0,0,0,92,Certain,,blue,past_20260908_181425,,,
+PA-20,Past,Grounds,Video & Media,Video of Ministries over the years,,0,0,0,91,Certain,,green,past_20260908_181431,,,Grounds cut of the ministries video; PA-04 is the Ballroom cut.
+PA-21,Past,Ballroom,Photos & Memory,Slideshow of Photos,,0,0,0,96,Certain,,yellow,past_20260908_181428,,,Slideshow sited in Ballroom. Also proposed for Rooms (PR-10) and Welcome (PR-17).
+PA-22,Past,Ballroom,Music,Music over the last 50 years,,0,0,0,96,Certain,,yellow,past_20260908_181428,,,
+PA-23,Past,Grounds,Music,Grounds Music,"Band, Piano, Singers",0,0,0,78,High,Cursive; the three items are a list I read line by line,green,past_20260908_181431,,,
+PA-24,Past,Welcome,Guests & Hospitality,VIP 'Happy Hour' for honored guests,,0,0,0,100,Confirmed,Confirmed by Mark against the physical note,purple,past_20260908_181417,,,Second word partly obscured
+PR-01,Present,Welcome,Guests & Hospitality,"Name tags with year you joined, color coded by decade",,3,1,7,90,Certain,Dots cover part of the second line,purple,present_20260908_181908,PR-01 + PA-09,Everyone's name tag is color coded based on the decade they joined,"Merged with PA-09, votes pooled. The two were on different panels — PR-01 was Celebrate the Present, PA-09 was Honor the Past — so the panel is your call. Defaulted to Present, which carried the three purple."
+PR-02,Present,Ballroom,Involvement,Involvement of Students,"Camp Hope etc. — 'Celebrate: are more involved, keep it up'",0,2,8,82,High,Headline is clear red print; the two black annotations are smaller and harder,yellow (red ink),present_20260908_181855,,,Two separate people spent their red dot here
+PR-03,Present,Welcome,Photos & Memory,Photo Booth — decorated area,'Booth' added at top; red dot initialed,3,1,7,92,Certain,,purple,present_20260908_181901,PR-03 + PR-09,Photo Booth,"Merged with PR-09 — same idea, same zone, same panel. The red dot is initialed."
+PR-04,Present,Grounds,Kids & Activities,Bounce house + Yard games — hire someone to supervise,,3,0,3,84,High,Text runs sideways within the note and is small,green,present_20260908_181908,PR-04 + PR-12 + PR-29,Yard Games | Bounce House,"Merged with PR-12 and PR-29, votes pooled. Worth a second look: a bounce house and yard games are separate line items with different suppliers and costs, so you may want them apart again for budgeting even though they pooled as one idea."
+PR-05,Present,Rooms,Kids & Activities,Hire someone to supervise playground for very little ones to play,,2,0,2,100,Confirmed,Confirmed by Mark against the physical note,blue,present_20260908_181908,,,"Conflict: the note asks for a supervisor, but Rooms must run unattended. Not a duplicate of PR-11 — that is a movie room, this is a toddler playground; they only share the staffing need."
+PR-06,Present,Ballroom,Program & Flow,10 min Artifact Moments,"One object, one story, told twice across the night (marked 'CP')",1,0,1,92,Certain,,yellow,present_20260908_181840,,,
+PR-07,Present,Welcome,Music,Songs / Greeting,,1,0,1,85,High,"Loose note, photographed at an angle on the table",purple,present_20260908_181855,,,Loose note — was off the board when photographed
+PR-08,Present,Welcome,Music,'Jazz' version of Favorite Hymns on piano/guitar,,1,0,1,82,High,Loose note; the last word ('guitar') is partly under a vote dot,purple,present_20260908_181855,,,Loose note
+PR-10,Present,Rooms,Photos & Memory,Slideshow of Photos,,1,0,1,94,Certain,,blue,present_20260908_181908,,,Slideshow sited in Rooms. Also proposed for Ballroom (PA-21) and Welcome (PR-17).
+PR-11,Present,Rooms,Kids & Activities,Kids movie room for those who are tired of being outside,hire someone to supervise,1,0,1,76,High,An overlapping note cuts the left edge of every line — 'those' and 'being' are reconstructed,blue,present_20260908_181908,,,"Conflict: the note asks for a supervisor, but Rooms must run unattended. Not a duplicate of PR-05 — see that note."
+PR-13,Present,Ballroom,Program & Flow,MC,,0,0,0,90,Certain,Two cursive letters,yellow,present_20260908_181901,,,
+PR-14,Present,Ballroom,Program & Flow,Introduction,,0,0,0,90,Certain,,yellow,present_20260908_181901,,,
+PR-15,Present,Welcome,Program & Flow,Welcome Group,,0,0,0,80,High,Cursive; 'Group' is close to a squiggle,purple,present_20260908_181908,,,
+PR-16,Present,Ballroom,Program & Flow,Prayer by Danielle,or by unexpected group (youth?),0,0,0,93,Certain,,yellow,present_20260908_181901,,,
+PR-17,Present,Welcome,Photos & Memory,Photo Slideshow,,0,0,0,95,Certain,,purple,present_20260908_181901,,,Slideshow sited in Welcome. Also proposed for Ballroom (PA-21) and Rooms (PR-10).
+PR-18,Present,Ballroom,Program & Flow,Ballroom — Focus on Pastors,,0,0,0,100,Confirmed,Confirmed by Mark against the physical note,yellow,present_20260908_181901,,,
+PR-19,Present,Ballroom,Video & Media,Video Presentation of Ministries — PRESENT,,0,0,0,88,High,Cursive but legible; read from the panel overview,yellow,present_20260908_181840,,,
+PR-20,Present,Welcome,Music,Sing theme song,,0,0,0,88,High,"Loose note, rotated",purple,present_20260908_181855,,,Loose note
+PR-21,Present,Welcome,Music,Choir song,50th anniversary song,0,0,0,100,Confirmed,Confirmed by Mark against the physical note,purple,present_20260908_181901,,,Very faint pencil
+PR-22,Present,Welcome,Music,Short time of Music with Praise Band,,0,0,0,100,Confirmed,Confirmed by Mark against the physical note,purple,present_20260908_181855,,,Loose note
+PR-23,Present,Welcome,Music,Eric Daub or other pianist playing,,0,0,0,100,Confirmed,Confirmed by Mark against the physical note,purple,present_20260908_181855,,,Loose note
+PR-24,Present,Ballroom,Music,Soft background music during meal,,0,0,0,100,Confirmed,Confirmed by Mark against the physical note,yellow,present_20260908_181901,,,Last word unreadable
+PR-25,Present,Welcome,Guests & Hospitality,Seating for disabled,,0,0,0,94,Certain,,purple,present_20260908_181840,,,
+PR-26,Present,Grounds,Guests & Hospitality,Chairs where observers can sit,marked 'G',0,0,0,86,High,Cursive,green,present_20260908_181901,,,
+PR-27,Present,Ballroom,Guests & Hospitality,Centerpiece on each table to go home with one guest,,0,0,0,88,High,"Small neat print, five lines",yellow,present_20260908_181908,,,
+PR-28,Present,Rooms,Involvement,Charitable Contributions to our Ministry Teams,"food pantry, etc.",0,0,0,92,Certain,,blue,present_20260908_181840,,,
+PR-30,Present,Grounds,Kids & Activities,Dancing,,0,0,0,96,Certain,,green,present_20260908_181840,,,
+PR-32,Present,Rooms,Kids & Activities,"Quiet Family Space — coloring, activities, nursing area",,0,0,0,85,High,Partly overlapped by the note above it,blue,present_20260908_181901,,,
+PR-33,Present,Rooms,Kids & Activities,TV viewing if a game is on that day,,0,0,0,92,Certain,,blue,present_20260908_181840,,,
+FU-01,Future,Ballroom,Program & Speakers,2 Youth/Young Adult Speeches,'How TLLC inspires the Future',2,1,6,95,Certain,,yellow,future_20260908_182709,,,Ballroom treatment of the youth story; FU-02 is the Welcome treatment. Not duplicates.
+FU-02,Future,Welcome,Program & Speakers,Youth / Young Adult Storyboard Display,'How TLLC inspires the Future',2,0,2,100,Confirmed,Confirmed by Mark against the physical note,purple,future_20260908_182706,,,"Welcome treatment of the youth story; FU-01 is the Ballroom treatment. Vote count corrected by Mark: 2 purple, no red."
+FU-03,Future,Grounds,Ceremony,Butterfly Release at Sunset,marked 'IF',2,1,6,88,High,The 'IF' prefix is unexplained — initials or a conditional,green,future_20260908_182659,,,
+FU-04,Future,Ballroom,Building & Legacy,Display future proposals for TLLC — New Building Design Plans,,3,1,7,89,High,,yellow,future_20260908_182659,FU-04 + FU-05,Display future proposals for TLLC,"Merged with FU-05, votes combined. The two notes were different colours — FU-04 was Ballroom, FU-05 was Rooms — so the zone is your call. Defaulted to Ballroom, which carried the red dot and 2 of the 3 purple. This also retires the contested-dot question between them."
+FU-06,Future,Welcome,Time Capsule,Close a NEW Time Capsule,,3,0,3,92,Certain,,purple,future_20260908_182706,,,
+FU-07,Future,Rooms,Dream Wall,Dream Wall,'by our 75th I hope TLLC….' one marker (marked 'IF'),3,0,3,86,High,'one marker' is small; the 'IF' prefix is unexplained,blue,future_20260908_182659,,,"2 of 3 dots straddle the seam with FU-08 — and FU-08 is a Ballroom note, so the zone is at stake too."
+FU-08,Future,Ballroom,Dream Wall,Stickies to write dreams for future,,0,0,0,84,High,"Cursive, read upside down",yellow,future_20260908_182659,,,"Ballroom version of the dream wall; FU-07 is the Rooms version, which holds the votes."
+FU-09,Future,Welcome,Building & Legacy,Sign up for brick on front walk during cocktail hr.,,1,0,1,92,Certain,,purple,future_20260908_182706,,,
+FU-10,Future,Rooms,Kids & Youth,Children's nursery + care,,0,0,0,94,Certain,,blue,future_20260908_182659,,,"Conflict: nursery care needs staffing, but Rooms must run unattended."
+FU-11,Future,Grounds,Kids & Youth,Youth teach a rap or simple song w/ actions to children,during cocktail hr → to perform a descant,0,0,0,82,High,Long note read upside down; 'descant' is a specific word worth confirming,green,future_20260908_182659,,,
+FU-12,Future,Grounds,Kids & Youth,Children's Play area — incorporating Spark Bible Stories,,0,0,0,100,Confirmed,Confirmed by Mark against the physical note,green,future_20260908_182706,,,One word uncertain
+FU-13,Future,Grounds,Kids & Youth,Children's games around Bible Stories,,0,0,0,91,Certain,,green,future_20260908_182706,FU-13 + PR-31,Children's games,"Merged with PR-31, which was the generic version of the same idea. The two were on different panels — FU-13 was Inspire the Future, PR-31 was Celebrate the Present — and neither carried a vote, so the panel is an open call."
+FU-14,Future,Ballroom,Kids & Youth,Growing Children Involvement,,0,0,0,92,Certain,,yellow (red ink),future_20260908_182706,,,
+FU-15,Future,Ballroom,Dream Wall,Tree w/ leaves… everyone has a leaf??,Predictions for TLLC's future? (This could turn into a gripe board though),0,0,0,76,High,Long and cursive; the mark at the end reads as a wry face but could be anything,yellow,future_20260908_182659,,,Ballroom version of the dream-wall idea — same family as FU-07 (Rooms) and FU-08.
+FU-16,Future,Grounds,Ceremony,Balloon Release w/ note of why you LOVE TLLC,,0,0,0,96,Certain,,green,future_20260908_182709,,,
+FU-17,Future,Grounds,Ceremony,Sparklers or Poppers,,0,0,0,94,Certain,,green,future_20260908_182711,,,
+FU-18,Future,Grounds,Music,Camp songs & stories,,0,0,0,90,Certain,,green,future_20260908_182709,,,
+FU-19,Future,Ballroom,Music,Larger choir participation,,0,0,0,90,Certain,,yellow (red ink),future_20260908_182709,,,
+FU-20,Future,Ballroom,Involvement,Stewardship Groups,,0,0,0,78,High,Cursive with a flourish; 'Groups' took a second look,yellow,future_20260908_182706,,,
+FU-21,Future,Welcome,Building & Legacy,"Welcome — where to go next, Building and Goals",,0,0,0,100,Confirmed,"Confirmed by Mark. If the leading 'Welcome' was naming the zone rather than the note's first word, drop it.",purple,future_20260908_182706,,,Faint cursive under glare — needs eyes on the physical note

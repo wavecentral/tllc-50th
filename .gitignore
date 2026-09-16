@@ -1,0 +1,12 @@
+# Internal committee material — never publish
+docs/
+drafts/
+reference/
+photos/
+
+# Working sources for the published boards (artifact format, not standalone)
+ideation/
+
+.DS_Store
+**/.DS_Store
+.claude/

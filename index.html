@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TLLC 50th Ideation</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,600;0,700;1,400&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:light dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  --paper:#FAF7F1; --card:#FFFFFF; --ink:#221D24; --muted:#6B6370; --faint:#8D8593;
+  --rule:#E5DFE3; --rule2:#F1ECEF; --plum:#5F2A58; --ember:#C4323C;
+  --z-ballroom:#C2942B; --z-rooms:#3B7F9E; --z-grounds:#5A8A39; --z-welcome:#7A47A0;
+  --shadow:0 1px 2px rgba(34,29,36,.05), 0 6px 16px -10px rgba(34,29,36,.16);
+}
+@media (prefers-color-scheme: dark){:root{
+  --paper:#141116; --card:#1F1A21; --ink:#EFEAF0; --muted:#A49CAA; --faint:#867E8C;
+  --rule:#332C36; --rule2:#28222B; --plum:#CE99C5; --ember:#F0787F;
+  --z-ballroom:#E8BE5A; --z-rooms:#6DB8D6; --z-grounds:#93C568; --z-welcome:#BA8CDB;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 20px -12px rgba(0,0,0,.7);
+}}
+*{box-sizing:border-box}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Karla","Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.5;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:760px; margin:0 auto; padding-inline:16px; padding-block:56px 72px}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 10px}
+h1{font-family:"Petrona",Georgia,serif; font-weight:700; font-size:clamp(30px,6vw,44px);
+  line-height:1.05; letter-spacing:-.015em; margin:0 0 14px; text-wrap:balance}
+.lede{color:var(--muted); margin:0 0 4px; font-size:16px; max-width:58ch}
+.tallies{display:flex; flex-wrap:wrap; gap:10px 26px; align-items:baseline;
+  margin:26px 0 0; padding-top:18px; border-top:1px solid var(--rule)}
+.tally{display:flex; align-items:baseline; gap:8px}
+.tally b{font-family:"IBM Plex Mono",monospace; font-size:21px; font-weight:500;
+  font-variant-numeric:tabular-nums}
+.tally span{font-size:12.5px; color:var(--muted)}
+.dot{width:11px;height:11px;border-radius:50%;display:inline-block;vertical-align:-1px}
+.dot.p{background:var(--plum)} .dot.r{background:var(--ember)}
+.cards{display:grid; gap:14px; margin:34px 0 0}
+a.card{display:block; text-decoration:none; color:inherit; background:var(--card);
+  border:1px solid var(--rule); border-radius:10px; padding:18px 20px; box-shadow:var(--shadow)}
+a.card:hover{border-color:var(--ink)}
+a.card:focus-visible{outline:2px solid var(--z-ballroom); outline-offset:2px}
+a.card h2{font-family:"Petrona",Georgia,serif; font-size:21px; font-weight:600;
+  margin:0 0 5px; letter-spacing:-.01em}
+a.card p{margin:0; font-size:13.5px; color:var(--muted); line-height:1.45}
+.zones{display:flex; flex-wrap:wrap; gap:8px 18px; margin:32px 0 0; padding-top:18px;
+  border-top:1px solid var(--rule); font-size:13px; color:var(--muted)}
+.zones div{display:flex; align-items:baseline; gap:7px}
+.zones i{width:10px; height:10px; border-radius:2px; display:block; flex-shrink:0;
+  transform:translateY(1px)}
+.foot{margin-top:34px; padding-top:18px; border-top:1px solid var(--rule);
+  font-size:13px; color:var(--faint)}
+.foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Committee session &middot; 8 September 2026</p>
+  <h1>Golden Celebration Ideation</h1>
+  <p class="lede">Every idea the committee put on the three panels, transcribed from the session
+  photos, checked back against the board, and de&#8209;duplicated. Each carries the part of the
+  property it belongs to &mdash; from the colour of the paper it was written on &mdash; and the
+  dots it drew.</p>
+
+  <div class="tallies">
+    <div class="tally"><b>71</b><span>ideas</span></div>
+    <div class="tally"><b>46</b><span><i class="dot p"></i> purple votes, six per person</span></div>
+    <div class="tally"><b>10</b><span><i class="dot r"></i> red votes, one per person</span></div>
+  </div>
+
+  <div class="cards">
+    <a class="card" href="results.html">
+      <h2>The results board</h2>
+      <p>All 71 ideas as a zone &times; panel grid. Switch which axis runs as columns, band the
+      other across the rows, and narrow each column or cell to its highest&#8209;voted few.
+      Nothing can be moved &mdash; this is the settled record.</p>
+    </a>
+    <a class="card" href="working.html">
+      <h2>The working board</h2>
+      <p>The same ideas, but cards can be dragged between zones and panels. On this site your
+      changes are kept in your own browser only &mdash; nobody else sees them, and they do not
+      travel between devices.</p>
+    </a>
+    <a class="card" href="data/ideation-notes.csv">
+      <h2>The data</h2>
+      <p>One row per idea: zone, panel, theme, vote counts, transcription confidence, merge
+      history, and the open questions that are not shown on the boards.</p>
+    </a>
+  </div>
+
+  <div class="zones">
+    <div><i style="background:var(--z-ballroom)"></i> Ballroom &mdash; the seated program</div>
+    <div><i style="background:var(--z-rooms)"></i> Rooms &mdash; must run unattended</div>
+    <div><i style="background:var(--z-grounds)"></i> Grounds &mdash; lower yard + deck</div>
+    <div><i style="background:var(--z-welcome)"></i> Welcome &mdash; entry, baby grand, cocktail hour</div>
+  </div>
+
+  <p class="foot">Open questions, contested dots and transcription notes are kept in
+  <a href="NOTES.md">NOTES.md</a> rather than on the boards.</p>
+</div>
+</body>
+</html>

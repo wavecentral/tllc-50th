@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>
+:root{color-scheme:light dark;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;padding:0}
+img{max-width:100%}
+[hidden]:not([hidden=until-found i]){display:none!important}
+</style>
+<title>TLLC 50th Ideation Results</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,600;0,700;1,400&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<style>
+:root{
+  --paper:#FAF7F1; --card:#FFFFFF; --card2:#FCFAF6;
+  --ink:#221D24; --muted:#6B6370; --faint:#8D8593;
+  --rule:#E5DFE3; --rule2:#F1ECEF;
+  --plum:#5F2A58; --ember:#C4323C; --amber:#8A6512;
+  --z-ballroom:#C2942B; --z-rooms:#3B7F9E; --z-grounds:#5A8A39; --z-welcome:#7A47A0;
+  --shadow:0 1px 2px rgba(34,29,36,.05), 0 6px 16px -10px rgba(34,29,36,.16);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141116; --card:#1F1A21; --card2:#191519;
+    --ink:#EFEAF0; --muted:#A49CAA; --faint:#867E8C;
+    --rule:#332C36; --rule2:#28222B;
+    --plum:#CE99C5; --ember:#F0787F; --amber:#DCB45C;
+    --z-ballroom:#E8BE5A; --z-rooms:#6DB8D6; --z-grounds:#93C568; --z-welcome:#BA8CDB;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 20px -12px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141116; --card:#1F1A21; --card2:#191519;
+  --ink:#EFEAF0; --muted:#A49CAA; --faint:#867E8C;
+  --rule:#332C36; --rule2:#28222B;
+  --plum:#CE99C5; --ember:#F0787F; --amber:#DCB45C;
+  --z-ballroom:#E8BE5A; --z-rooms:#6DB8D6; --z-grounds:#93C568; --z-welcome:#BA8CDB;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 20px -12px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink); margin:0;
+  font-family:"Karla","Helvetica Neue",Arial,sans-serif; font-size:15px; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1400px; margin:0 auto; padding-inline:16px; padding-block:0 64px}
+
+.mast{padding-block:40px 26px}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:11px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 10px}
+h1{font-family:"Petrona",Georgia,serif; font-weight:700; font-size:clamp(30px,5vw,46px);
+  line-height:1.04; letter-spacing:-.015em; margin:0 0 12px; text-wrap:balance}
+.lede{max-width:64ch; color:var(--muted); margin:0; font-size:15.5px}
+.lede b{color:var(--ink); font-weight:700}
+
+/* ---- zone key ---- */
+.zones{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin:28px 0 0}
+@media (max-width:900px){ .zones{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:520px){ .zones{grid-template-columns:1fr} }
+.zkey{border-top:3px solid var(--zc); padding-top:10px}
+.zkey h3{font-family:"Petrona",Georgia,serif; font-size:17px; font-weight:600; margin:0 0 3px; color:var(--zc)}
+.zkey p{margin:0; font-size:13px; color:var(--muted); line-height:1.4}
+.zkey .paper{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--faint); display:block; margin-top:6px}
+
+/* ---- matrix ---- */
+.matrix-wrap{margin:34px 0 0; overflow-x:auto}
+table.matrix{border-collapse:collapse; width:100%; min-width:520px; font-variant-numeric:tabular-nums}
+table.matrix caption{
+  text-align:left; font-family:"IBM Plex Mono",monospace; font-size:11px;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--muted); padding-bottom:10px}
+table.matrix th, table.matrix td{
+  text-align:left; padding:9px 12px; border-bottom:1px solid var(--rule2); font-size:13px}
+table.matrix thead th{
+  font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--faint); font-weight:400; border-bottom:1px solid var(--rule)}
+table.matrix tbody th{font-weight:700; color:var(--zc); border-left:3px solid var(--zc); padding-left:10px}
+table.matrix td{color:var(--muted); font-family:"IBM Plex Mono",monospace; font-size:12px}
+table.matrix td b{color:var(--ink); font-weight:500}
+table.matrix .zero{color:var(--faint); opacity:.5}
+table.matrix tfoot td, table.matrix tfoot th{border-bottom:0; border-top:1px solid var(--rule); color:var(--ink)}
+
+/* ---- controls ---- */
+.bar{position:sticky; top:env(safe-area-inset-top,0px); z-index:20;
+  background:color-mix(in srgb, var(--paper) 93%, transparent); backdrop-filter:blur(8px);
+  display:flex; flex-wrap:wrap; gap:12px 18px; align-items:center; justify-content:space-between;
+  padding-block:12px; border-bottom:1px solid var(--rule); margin:34px 0 22px}
+.group{display:flex; align-items:center; gap:9px; flex-wrap:wrap}
+.glab{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.09em;
+  text-transform:uppercase; color:var(--faint)}
+.seg{display:inline-flex; border:1px solid var(--rule); border-radius:999px; overflow:hidden; background:var(--card)}
+.seg button{appearance:none; border:0; background:transparent; color:var(--muted); cursor:pointer;
+  font:inherit; font-size:13px; padding:6px 14px; border-right:1px solid var(--rule2)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink); color:var(--paper); font-weight:700}
+.seg button:focus-visible{outline:2px solid var(--amber); outline-offset:-2px}
+.btn{appearance:none; font:inherit; font-size:13px; cursor:pointer; border:1px solid var(--rule);
+  background:var(--card); color:var(--ink); border-radius:999px; padding:6px 14px}
+.btn:hover{border-color:var(--ink)}
+.btn:focus-visible{outline:2px solid var(--amber); outline-offset:2px}
+.status{font-size:12px; color:var(--faint); font-family:"IBM Plex Mono",monospace}
+.minisel{font:inherit; font-size:13px; color:var(--ink); background:var(--card);
+  border:1px solid var(--rule); border-radius:999px; padding:5px 11px; cursor:pointer}
+.minisel:hover{border-color:var(--ink)}
+.minisel:focus-visible{outline:2px solid var(--amber); outline-offset:2px}
+.chk{display:inline-flex; align-items:center; gap:7px; font-size:13px; color:var(--muted); cursor:pointer}
+.chk input{accent-color:var(--ink); width:15px; height:15px; cursor:pointer; margin:0}
+.chk input:focus-visible{outline:2px solid var(--amber); outline-offset:2px}
+.chk:hover{color:var(--ink)}
+
+/* ---- board ---- */
+.board{display:grid; align-items:start; grid-template-columns:repeat(var(--cols,4),minmax(0,1fr))}
+.board:not(.grouped){gap:18px}
+@media (max-width:1100px){ .board:not(.grouped){grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:680px){  .board:not(.grouped){grid-template-columns:1fr} }
+
+/* grouped: columns = Arrange by, row bands = the other axis */
+.board.grouped{gap:0 14px}
+.chead{border-top:3px solid var(--zc,var(--rule)); padding:10px 0 4px; align-self:end}
+.chead h2{font-family:"Petrona",Georgia,serif; font-size:19px; font-weight:600; margin:0 0 3px;
+  color:var(--zc,var(--ink)); letter-spacing:-.01em}
+.chead .colmeta{border-bottom:0; padding-bottom:0; margin-bottom:0; gap:10px}
+.rowlab{grid-column:1/-1; display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 16px;
+  margin:26px 0 12px; padding:8px 0 9px 12px;
+  border-left:3px solid var(--zc,var(--rule)); border-bottom:1px solid var(--rule)}
+.rowlab h3{font-family:"Petrona",Georgia,serif; font-size:18px; font-weight:600; margin:0;
+  color:var(--zc,var(--ink)); letter-spacing:-.01em}
+.rowlab .colmeta{border-bottom:0; padding-bottom:0; margin-bottom:0}
+.cell{background:var(--card2); border:1px solid var(--rule); border-radius:8px; padding:10px}
+.cell.empty-cell{background:transparent; border-style:dashed; border-color:var(--rule2)}
+.cellhead{display:none; font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--zc,var(--faint)); margin-bottom:8px}
+@media (max-width:1000px){
+  .board.grouped{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .board.grouped .chead{display:none}
+  .board.grouped .cellhead{display:block}
+}
+@media (max-width:680px){
+  .board.grouped{grid-template-columns:1fr}
+  .board.grouped .cell.empty-cell{display:none}
+}
+
+.col{background:var(--card2); border:1px solid var(--rule); border-top:3px solid var(--zc,var(--rule));
+  border-radius:0 0 10px 10px; padding:14px; min-height:110px}
+.col > h2{font-family:"Petrona",Georgia,serif; font-size:20px; font-weight:600; margin:0 0 2px;
+  letter-spacing:-.01em; color:var(--zc,var(--ink))}
+.colblurb{font-family:"Petrona",Georgia,serif; font-style:italic; font-size:13.5px;
+  color:var(--muted); margin:0 0 9px; line-height:1.35}
+.colmeta{font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--muted);
+  display:flex; gap:14px; flex-wrap:wrap; padding-bottom:12px; margin-bottom:12px;
+  border-bottom:1px solid var(--rule); font-variant-numeric:tabular-nums}
+.stack{display:flex; flex-direction:column; gap:10px}
+.empty{color:var(--faint); font-size:13px; font-style:italic; padding:8px 2px}
+.more{margin:0; padding:7px 0 1px; border-top:1px dashed var(--rule); text-align:center;
+  font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--faint)}
+
+/* ---- note card ---- */
+.note{position:relative; background:var(--card); border:1px solid var(--rule); border-radius:8px;
+  padding:11px 12px 10px 16px; box-shadow:var(--shadow)}
+.note::before{content:""; position:absolute; left:0; top:0; bottom:0; width:5px;
+  border-radius:8px 0 0 8px; background:var(--zc)}
+.note.hasred{border-color:color-mix(in srgb,var(--ember) 40%, var(--rule))}
+.nhead{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:5px}
+.nid{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.06em; color:var(--faint)}
+.mergedwith{margin:7px 0 0; font-size:11.5px; line-height:1.4; color:var(--faint); font-style:italic}
+.dots{display:flex; gap:3px; align-items:center; flex-shrink:0}
+.dot{width:11px; height:11px; border-radius:50%; display:block}
+.dot.p{background:var(--plum)}
+.dot.r{background:var(--ember)}
+.idea{margin:0; font-size:14.5px; font-weight:500; line-height:1.35; text-wrap:pretty}
+.detail{margin:5px 0 0; font-size:12.5px; color:var(--muted); line-height:1.45}
+.nfoot{display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:9px}
+.cluster{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--faint); white-space:nowrap; overflow:hidden;
+  text-overflow:ellipsis; min-width:0}
+.other{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--faint); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.nfoot{gap:10px; border-top:1px solid var(--rule2); padding-top:8px}
+.other{color:var(--zc,var(--faint)); font-weight:500; flex-shrink:0}
+.note select:focus-visible{outline:2px solid var(--amber); outline-offset:1px}
+
+/* ---- footnotes ---- */
+.foot{margin-top:44px; border-top:1px solid var(--rule); padding-top:26px; max-width:70ch}
+.foot h3{font-family:"Petrona",Georgia,serif; font-size:17px; margin:22px 0 8px; font-weight:600}
+.foot h3:first-child{margin-top:0}
+.foot p{color:var(--muted); font-size:13.5px; margin:0 0 12px}
+.foot em{color:var(--ink); font-style:normal; font-weight:700}
+.legend{display:flex; gap:20px; flex-wrap:wrap; align-items:center; font-size:13px;
+  color:var(--muted); margin-bottom:16px}
+.legend span{display:flex; align-items:center; gap:7px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+</style>
+<div class="wrap">
+  <header class="mast">
+    <p class="eyebrow">Committee session &middot; 8 September 2026</p>
+    <h1>Golden Celebration Ideation</h1>
+    <p class="lede">71 ideas, transcribed from the session photos, checked back against the board, and de&#8209;duplicated. Each one carries two things: <b>the paper colour says which part of the property it belongs to</b>, and the dots say how the room voted. <b>Purple</b> was one of six regular votes; a <b>red dot</b> was the single &ldquo;I could own this&rdquo; vote. <b>Arrange by</b> picks the columns; with <b>Grouping</b> on, the other axis becomes the row bands, so the board is a full zone &times; panel grid. <b>Top</b> narrows each column &mdash; or each cell &mdash; to its highest-voted few. </p>
+
+    <div class="zones" id="zonekey"></div>
+  </header>
+
+  <div class="matrix-wrap">
+    <table class="matrix" id="matrix">
+      <caption>Ideas by zone and panel</caption>
+    </table>
+  </div>
+
+  <div class="bar">
+    <div class="group">
+      <span class="glab">Arrange by</span>
+      <div class="seg" role="group" aria-label="Board arrangement">
+        <button type="button" data-dim="zone" aria-pressed="true">Zone</button>
+        <button type="button" data-dim="panel" aria-pressed="false">Panel</button>
+      </div>
+      <label class="chk"><input type="checkbox" id="grouping" checked> Grouping</label>
+      <span class="glab" id="groupby"></span>
+    </div>
+    <div class="group">
+      <span class="glab">Top</span>
+      <select class="minisel" id="topn" aria-label="Show only the highest-voted notes in each column">
+        <option value="0">All</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="8">8</option>
+        <option value="10">10</option>
+      </select>
+      <span class="glab" id="topscope"></span>
+    </div>
+    <div class="group">
+      <span class="glab">Show</span>
+      <div class="seg" role="group" aria-label="Filter cards">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="voted" aria-pressed="false">Voted</button>
+        <button type="button" data-filter="red" aria-pressed="false">Red dots</button>
+      </div>
+    </div>
+    <div class="group">
+      <button type="button" class="btn" id="export" hidden>Download CSV</button>
+    </div>
+  </div>
+
+  <div class="board" id="board" data-dim="zone"></div>
+
+  <section class="foot">
+    <h3>This board is final</h3>
+    <p>Assignments and vote counts are settled &mdash; every idea sits where it belongs and nothing here can be moved. The controls only change how you look at the same set. If something does need to change, it changes in the working board and a fresh copy comes over here.</p>
+
+    <h3>Reading a card</h3>
+    <div class="legend">
+      <span><b class="dot p" style="display:inline-block"></b> one regular vote</span>
+      <span><b class="dot r" style="display:inline-block"></b> one passion vote</span>
+      <span>The bar down the left edge is the zone.</span>
+      <span>Its foot gives the theme and the other axis.</span>
+    </div>
+    <p>Cards are ordered by their votes within each lane, a red dot counting for more than a purple one. Where two or three notes carried the same idea they are now a single card, with their votes pooled and the folded-in wording named underneath.</p>
+
+    <h3>Narrowing to a shortlist</h3>
+    <p><em>Top</em> keeps only the highest-voted notes in each column &mdash; or, with <em>Grouping</em> on, in each cell of the grid, so you get the best few ideas for the Grounds during the Present rather than the best few across the whole zone. The label next to it says which it is doing. Anything cut is counted at the foot of its stack, so nothing disappears silently.</p>
+    <p>The column and row totals keep counting every idea, not just the visible ones. Ideas with no votes still take a place in the order, so pair <em>Top</em> with <em>Show: Voted</em> when you want a shortlist with nothing arbitrary in it.</p>
+
+  </section>
+</div>
+
+<script id="notes-data" type="application/json">[{"id":"PA-01","p":"Past","z":"Ballroom","c":"Program & Speakers","t":"Former Pastors Speak","d":"","v":3,"r":1,"k":"yellow (red ink)","mt":[]},{"id":"PA-02","p":"Past","z":"Ballroom","c":"Program & Speakers","t":"Special Short Speeches from Guests","d":"ex: CeCee Mills, Pastors, Presidents","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PA-03","p":"Past","z":"Welcome","c":"Program & Speakers","t":"Introduce pastors from past","d":"","v":0,"r":1,"k":"purple","mt":[]},{"id":"PA-04","p":"Past","z":"Ballroom","c":"Video & Media","t":"Video Presentation of our Ministries — Past","d":"","v":3,"r":0,"k":"yellow","mt":[]},{"id":"PA-05","p":"Past","z":"Rooms","c":"Games","t":"Timeline Game","d":"Guess when the event took place","v":3,"r":0,"k":"blue","mt":[]},{"id":"PA-06","p":"Past","z":"Ballroom","c":"Games","t":"Computer game w/ timeline questions","d":"signed 'R—'","v":0,"r":0,"k":"yellow (red ink)","mt":[]},{"id":"PA-07","p":"Past","z":"Grounds","c":"Time Capsule","t":"Open 25th Time Capsule","d":"","v":2,"r":1,"k":"green","mt":["Open Time Capsule"]},{"id":"PA-10","p":"Past","z":"Welcome","c":"Food & Drink","t":"Signature Golden Cocktail","d":"","v":1,"r":0,"k":"purple","mt":[]},{"id":"PA-11","p":"Past","z":"Rooms","c":"Displays","t":"Table of Remembrance Items","d":"","v":1,"r":0,"k":"blue","mt":[]},{"id":"PA-12","p":"Past","z":"Welcome","c":"Photos & Memory","t":"Polaroid Guest books","d":"3 or 4 cameras — paste a photo, write a line (marked 'HP')","v":1,"r":0,"k":"purple","mt":[]},{"id":"PA-13","p":"Past","z":"Rooms","c":"Displays","t":"Historical Displays / Artifacts","d":"","v":0,"r":0,"k":"blue","mt":[]},{"id":"PA-14","p":"Past","z":"Rooms","c":"Displays","t":"Display history","d":"","v":0,"r":0,"k":"blue","mt":[]},{"id":"PA-15","p":"Past","z":"Ballroom","c":"Displays","t":"Display tables by decade","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PA-16","p":"Past","z":"Welcome","c":"Displays","t":"Display on piano","d":"","v":0,"r":0,"k":"purple","mt":[]},{"id":"PA-17","p":"Past","z":"Welcome","c":"Displays","t":"Portraits of our Pastors over the years","d":"","v":0,"r":0,"k":"purple","mt":[]},{"id":"PA-18","p":"Past","z":"Ballroom","c":"Displays","t":"Extra cookbooks for sale display","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PA-19","p":"Past","z":"Rooms","c":"Video & Media","t":"Historical Video Running","d":"","v":0,"r":0,"k":"blue","mt":[]},{"id":"PA-20","p":"Past","z":"Grounds","c":"Video & Media","t":"Video of Ministries over the years","d":"","v":0,"r":0,"k":"green","mt":[]},{"id":"PA-21","p":"Past","z":"Ballroom","c":"Photos & Memory","t":"Slideshow of Photos","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PA-22","p":"Past","z":"Ballroom","c":"Music","t":"Music over the last 50 years","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PA-23","p":"Past","z":"Grounds","c":"Music","t":"Grounds Music","d":"Band, Piano, Singers","v":0,"r":0,"k":"green","mt":[]},{"id":"PA-24","p":"Past","z":"Welcome","c":"Guests & Hospitality","t":"VIP 'Happy Hour' for honored guests","d":"","v":0,"r":0,"k":"purple","mt":[]},{"id":"PR-01","p":"Present","z":"Welcome","c":"Guests & Hospitality","t":"Name tags with year you joined, color coded by decade","d":"","v":3,"r":1,"k":"purple","mt":["Everyone's name tag is color coded based on the decade they joined"]},{"id":"PR-02","p":"Present","z":"Ballroom","c":"Involvement","t":"Involvement of Students","d":"Camp Hope etc. — 'Celebrate: are more involved, keep it up'","v":0,"r":2,"k":"yellow (red ink)","mt":[]},{"id":"PR-03","p":"Present","z":"Welcome","c":"Photos & Memory","t":"Photo Booth — decorated area","d":"'Booth' added at top; red dot initialed","v":3,"r":1,"k":"purple","mt":["Photo Booth"]},{"id":"PR-04","p":"Present","z":"Grounds","c":"Kids & Activities","t":"Bounce house + Yard games — hire someone to supervise","d":"","v":3,"r":0,"k":"green","mt":["Yard Games","Bounce House"]},{"id":"PR-05","p":"Present","z":"Rooms","c":"Kids & Activities","t":"Hire someone to supervise playground for very little ones to play","d":"","v":2,"r":0,"k":"blue","mt":[]},{"id":"PR-06","p":"Present","z":"Ballroom","c":"Program & Flow","t":"10 min Artifact Moments","d":"One object, one story, told twice across the night (marked 'CP')","v":1,"r":0,"k":"yellow","mt":[]},{"id":"PR-07","p":"Present","z":"Welcome","c":"Music","t":"Songs / Greeting","d":"","v":1,"r":0,"k":"purple","mt":[]},{"id":"PR-08","p":"Present","z":"Welcome","c":"Music","t":"'Jazz' version of Favorite Hymns on piano/guitar","d":"","v":1,"r":0,"k":"purple","mt":[]},{"id":"PR-10","p":"Present","z":"Rooms","c":"Photos & Memory","t":"Slideshow of Photos","d":"","v":1,"r":0,"k":"blue","mt":[]},{"id":"PR-11","p":"Present","z":"Rooms","c":"Kids & Activities","t":"Kids movie room for those who are tired of being outside","d":"hire someone to supervise","v":1,"r":0,"k":"blue","mt":[]},{"id":"PR-13","p":"Present","z":"Ballroom","c":"Program & Flow","t":"MC","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PR-14","p":"Present","z":"Ballroom","c":"Program & Flow","t":"Introduction","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PR-15","p":"Present","z":"Welcome","c":"Program & Flow","t":"Welcome Group","d":"","v":0,"r":0,"k":"purple","mt":[]},{"id":"PR-16","p":"Present","z":"Ballroom","c":"Program & Flow","t":"Prayer by Danielle","d":"or by unexpected group (youth?)","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PR-17","p":"Present","z":"Welcome","c":"Photos & Memory","t":"Photo Slideshow","d":"","v":0,"r":0,"k":"purple","mt":[]},{"id":"PR-18","p":"Present","z":"Ballroom","c":"Program & Flow","t":"Ballroom — Focus on Pastors","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PR-19","p":"Present","z":"Ballroom","c":"Video & Media","t":"Video Presentation of Ministries — PRESENT","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PR-20","p":"Present","z":"Welcome","c":"Music","t":"Sing theme song","d":"","v":0,"r":0,"k":"purple","mt":[]},{"id":"PR-21","p":"Present","z":"Welcome","c":"Music","t":"Choir song","d":"50th anniversary song","v":0,"r":0,"k":"purple","mt":[]},{"id":"PR-22","p":"Present","z":"Welcome","c":"Music","t":"Short time of Music with Praise Band","d":"","v":0,"r":0,"k":"purple","mt":[]},{"id":"PR-23","p":"Present","z":"Welcome","c":"Music","t":"Eric Daub or other pianist playing","d":"","v":0,"r":0,"k":"purple","mt":[]},{"id":"PR-24","p":"Present","z":"Ballroom","c":"Music","t":"Soft background music during meal","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PR-25","p":"Present","z":"Welcome","c":"Guests & Hospitality","t":"Seating for disabled","d":"","v":0,"r":0,"k":"purple","mt":[]},{"id":"PR-26","p":"Present","z":"Grounds","c":"Guests & Hospitality","t":"Chairs where observers can sit","d":"marked 'G'","v":0,"r":0,"k":"green","mt":[]},{"id":"PR-27","p":"Present","z":"Ballroom","c":"Guests & Hospitality","t":"Centerpiece on each table to go home with one guest","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"PR-28","p":"Present","z":"Rooms","c":"Involvement","t":"Charitable Contributions to our Ministry Teams","d":"food pantry, etc.","v":0,"r":0,"k":"blue","mt":[]},{"id":"PR-30","p":"Present","z":"Grounds","c":"Kids & Activities","t":"Dancing","d":"","v":0,"r":0,"k":"green","mt":[]},{"id":"PR-32","p":"Present","z":"Rooms","c":"Kids & Activities","t":"Quiet Family Space — coloring, activities, nursing area","d":"","v":0,"r":0,"k":"blue","mt":[]},{"id":"PR-33","p":"Present","z":"Rooms","c":"Kids & Activities","t":"TV viewing if a game is on that day","d":"","v":0,"r":0,"k":"blue","mt":[]},{"id":"FU-01","p":"Future","z":"Ballroom","c":"Program & Speakers","t":"2 Youth/Young Adult Speeches","d":"'How TLLC inspires the Future'","v":2,"r":1,"k":"yellow","mt":[]},{"id":"FU-02","p":"Future","z":"Welcome","c":"Program & Speakers","t":"Youth / Young Adult Storyboard Display","d":"'How TLLC inspires the Future'","v":2,"r":0,"k":"purple","mt":[]},{"id":"FU-03","p":"Future","z":"Grounds","c":"Ceremony","t":"Butterfly Release at Sunset","d":"marked 'IF'","v":2,"r":1,"k":"green","mt":[]},{"id":"FU-04","p":"Future","z":"Ballroom","c":"Building & Legacy","t":"Display future proposals for TLLC — New Building Design Plans","d":"","v":3,"r":1,"k":"yellow","mt":["Display future proposals for TLLC"]},{"id":"FU-06","p":"Future","z":"Welcome","c":"Time Capsule","t":"Close a NEW Time Capsule","d":"","v":3,"r":0,"k":"purple","mt":[]},{"id":"FU-07","p":"Future","z":"Rooms","c":"Dream Wall","t":"Dream Wall","d":"'by our 75th I hope TLLC….' one marker (marked 'IF')","v":3,"r":0,"k":"blue","mt":[]},{"id":"FU-08","p":"Future","z":"Ballroom","c":"Dream Wall","t":"Stickies to write dreams for future","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"FU-09","p":"Future","z":"Welcome","c":"Building & Legacy","t":"Sign up for brick on front walk during cocktail hr.","d":"","v":1,"r":0,"k":"purple","mt":[]},{"id":"FU-10","p":"Future","z":"Rooms","c":"Kids & Youth","t":"Children's nursery + care","d":"","v":0,"r":0,"k":"blue","mt":[]},{"id":"FU-11","p":"Future","z":"Grounds","c":"Kids & Youth","t":"Youth teach a rap or simple song w/ actions to children","d":"during cocktail hr → to perform a descant","v":0,"r":0,"k":"green","mt":[]},{"id":"FU-12","p":"Future","z":"Grounds","c":"Kids & Youth","t":"Children's Play area — incorporating Spark Bible Stories","d":"","v":0,"r":0,"k":"green","mt":[]},{"id":"FU-13","p":"Future","z":"Grounds","c":"Kids & Youth","t":"Children's games around Bible Stories","d":"","v":0,"r":0,"k":"green","mt":["Children's games"]},{"id":"FU-14","p":"Future","z":"Ballroom","c":"Kids & Youth","t":"Growing Children Involvement","d":"","v":0,"r":0,"k":"yellow (red ink)","mt":[]},{"id":"FU-15","p":"Future","z":"Ballroom","c":"Dream Wall","t":"Tree w/ leaves… everyone has a leaf??","d":"Predictions for TLLC's future? (This could turn into a gripe board though)","v":0,"r":0,"k":"yellow","mt":[]},{"id":"FU-16","p":"Future","z":"Grounds","c":"Ceremony","t":"Balloon Release w/ note of why you LOVE TLLC","d":"","v":0,"r":0,"k":"green","mt":[]},{"id":"FU-17","p":"Future","z":"Grounds","c":"Ceremony","t":"Sparklers or Poppers","d":"","v":0,"r":0,"k":"green","mt":[]},{"id":"FU-18","p":"Future","z":"Grounds","c":"Music","t":"Camp songs & stories","d":"","v":0,"r":0,"k":"green","mt":[]},{"id":"FU-19","p":"Future","z":"Ballroom","c":"Music","t":"Larger choir participation","d":"","v":0,"r":0,"k":"yellow (red ink)","mt":[]},{"id":"FU-20","p":"Future","z":"Ballroom","c":"Involvement","t":"Stewardship Groups","d":"","v":0,"r":0,"k":"yellow","mt":[]},{"id":"FU-21","p":"Future","z":"Welcome","c":"Building & Legacy","t":"Welcome — where to go next, Building and Goals","d":"","v":0,"r":0,"k":"purple","mt":[]}]</script>
+<script>
+(function(){
+  "use strict";
+  function readJSON(id, fb){
+    try { return JSON.parse(document.getElementById(id).textContent); } catch(e){ return fb; }
+  }
+  var NOTES = readJSON("notes-data", []);
+
+  var ZONES = [
+    {key:"Ballroom", label:"The Ballroom", blurb:"The seated program. Everyone at once.", paper:"Yellow notes",  css:"--z-ballroom"},
+    {key:"Rooms",    label:"The Rooms",    blurb:"Side rooms. Must run unattended.",     paper:"Blue notes",    css:"--z-rooms"},
+    {key:"Grounds",  label:"The Grounds",  blurb:"Lower yard + covered deck. ~4,000 sq ft.", paper:"Green notes", css:"--z-grounds"},
+    {key:"Welcome",  label:"The Welcome",  blurb:"Entry, baby grand, cocktail hour.",    paper:"Purple notes",  css:"--z-welcome"}
+  ];
+  var PANELS = [
+    {key:"Past",    label:"Honor the Past",        short:"Past",    blurb:"Looking back over fifty years."},
+    {key:"Present", label:"Celebrate the Present", short:"Present", blurb:"The day itself."},
+    {key:"Future",  label:"Inspire the Future",    short:"Future",  blurb:"What comes after."}
+  ];
+  var ZC = {}; ZONES.forEach(function(z){ ZC[z.key] = "var(" + z.css + ")"; });
+
+  var dim = "zone", filter = "all", grouped = true, topN = 0;
+  var VLS = "tllc50-results-view-v1";
+  try {
+    var vp = JSON.parse(localStorage.getItem(VLS) || "null");
+    if(vp){
+      if(vp.dim === "zone" || vp.dim === "panel") dim = vp.dim;
+      if(typeof vp.grouped === "boolean") grouped = vp.grouped;
+      if(typeof vp.filter === "string") filter = vp.filter;
+      if(typeof vp.topN === "number" && vp.topN >= 0) topN = vp.topN;
+    }
+  } catch(e){}
+  function saveView(){
+    try { localStorage.setItem(VLS, JSON.stringify({dim:dim, grouped:grouped, filter:filter, topN:topN})); }
+    catch(e){}
+  }
+  var board = document.getElementById("board");
+
+  function esc(s){
+    return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;")
+      .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  }
+  function zoneOf(n){ return n.z; }
+  function panelOf(n){ return n.p; }
+  function otherDim(){ return dim === "zone" ? "panel" : "zone"; }
+  function lanesFor(d){ return d === "zone" ? ZONES : PANELS; }
+  function keyFor(n, d){ return d === "zone" ? zoneOf(n) : panelOf(n); }
+  function score(n){ return n.v + 4*n.r; }
+  function visible(n){
+    if(filter === "voted") return (n.v + n.r) > 0;
+    if(filter === "red")   return n.r > 0;
+    return true;
+  }
+
+  // ---- zone key ----------------------------------------------------
+  document.getElementById("zonekey").innerHTML = ZONES.map(function(z){
+    return '<div class="zkey" style="--zc:var('+z.css+')"><h3>'+esc(z.label)+'</h3>'+
+      '<p>'+esc(z.blurb)+'</p><span class="paper">'+esc(z.paper)+'</span></div>';
+  }).join("");
+
+  // ---- matrix ------------------------------------------------------
+  function buildMatrix(){
+    var cols = PANELS;
+    var h = "<thead><tr><th scope=\"col\">Zone</th>" +
+      cols.map(function(c){ return '<th scope="col">'+esc(c.short||c.label)+'</th>'; }).join("") +
+      '<th scope="col">All</th></tr></thead><tbody>';
+    ZONES.forEach(function(z){
+      var inZone = NOTES.filter(function(n){ return zoneOf(n) === z.key; });
+      h += '<tr style="--zc:var('+z.css+')"><th scope="row">'+esc(z.label)+"</th>";
+      cols.forEach(function(c){
+        var cell = inZone.filter(function(n){ return panelOf(n) === c.key; });
+        h += cell.length ? "<td><b>"+cell.length+"</b></td>" : '<td class="zero">&mdash;</td>';
+      });
+      h += "<td><b>"+inZone.length+"</b></td></tr>";
+    });
+    h += "</tbody><tfoot><tr><th scope=\"row\">All</th>";
+    cols.forEach(function(c){
+      var cell = NOTES.filter(function(n){ return panelOf(n) === c.key; });
+      h += "<td><b>"+cell.length+"</b></td>";
+    });
+    h += "<td><b>"+NOTES.length+"</b></td></tr></tfoot>";
+    document.getElementById("matrix").innerHTML =
+      '<caption>Ideas by zone and panel</caption>' + h;
+  }
+
+  // ---- cards -------------------------------------------------------
+  function cardHTML(n){
+    var dots = "";
+    for(var i=0;i<n.v;i++) dots += '<span class="dot p" title="regular vote"></span>';
+    for(var j=0;j<n.r;j++) dots += '<span class="dot r" title="passion vote"></span>';
+    var oth = lanesFor(otherDim()).filter(function(l){ return l.key === keyFor(n, otherDim()); })[0];
+    return '<article class="note'+(n.r?" hasred":"")+
+      '" data-id="'+esc(n.id)+'" style="--zc:'+ZC[zoneOf(n)]+'">'+
+      '<div class="nhead"><span class="nid">'+esc(n.id)+"</span>"+
+      '<span class="dots">'+dots+"</span></div>"+
+      '<p class="idea">'+esc(n.t)+"</p>"+
+      (n.d ? '<p class="detail">'+esc(n.d)+"</p>" : "")+
+      (n.mt && n.mt.length ? '<p class="mergedwith">Merged with '+
+        n.mt.map(esc).join("; ")+"</p>" : "")+
+      '<div class="nfoot"><span class="cluster">'+esc(n.c)+"</span>"+
+      '<span class="other">'+esc(oth ? (oth.short || oth.label) : "")+"</span></div>"+
+      "</article>";
+  }
+
+  function byScore(a,b){ return score(b) - score(a) || a.id.localeCompare(b.id); }
+  function tally(list){
+    return "<span>"+list.length+" notes</span><span>"+
+      list.reduce(function(s,n){ return s+n.v; },0)+" purple</span><span>"+
+      list.reduce(function(s,n){ return s+n.r; },0)+" red</span>";
+  }
+  function limit(list){
+    if(!topN || list.length <= topN) return {shown:list, hidden:0};
+    return {shown:list.slice(0, topN), hidden:list.length - topN};
+  }
+  function stackHTML(cut, anyAtAll){
+    return '<div class="stack">'+
+      (cut.shown.length ? cut.shown.map(cardHTML).join("")
+        : '<p class="empty">'+(anyAtAll ? "None match the filter." : "Drop here.")+"</p>")+
+      (cut.hidden ? '<p class="more">+'+cut.hidden+" below the cut</p>" : "")+
+      "</div>";
+  }
+
+  function render(){
+    board.dataset.dim = dim;
+    board.classList.toggle("grouped", grouped);
+    var cols = lanesFor(dim);
+    board.style.setProperty("--cols", cols.length);
+    var other = otherDim();
+    var html = "";
+
+    if(!grouped){
+      cols.forEach(function(l){
+        var all = NOTES.filter(function(n){ return keyFor(n, dim) === l.key; });
+        var cut = limit(all.filter(visible).sort(byScore));
+        var zc = dim === "zone" ? ZC[l.key] : "var(--rule)";
+        html += '<section class="col" data-lane="'+l.key+'" style="--zc:'+zc+'">'+
+          "<h2>"+esc(l.label)+"</h2>"+
+          '<p class="colblurb">'+esc(l.blurb)+"</p>"+
+          '<div class="colmeta">'+tally(all)+"</div>"+
+          stackHTML(cut, all.length)+"</section>";
+      });
+    } else {
+      cols.forEach(function(l){
+        var all = NOTES.filter(function(n){ return keyFor(n, dim) === l.key; });
+        var zc = dim === "zone" ? ZC[l.key] : "var(--rule)";
+        html += '<div class="chead" style="--zc:'+zc+'"><h2>'+esc(l.label)+"</h2>"+
+          '<div class="colmeta">'+tally(all)+"</div></div>";
+      });
+      lanesFor(other).forEach(function(r){
+        var inRow = NOTES.filter(function(n){ return keyFor(n, other) === r.key; });
+        var rzc = other === "zone" ? ZC[r.key] : "var(--rule)";
+        html += '<div class="rowlab" style="--zc:'+rzc+'"><h3>'+esc(r.label)+"</h3>"+
+          '<div class="colmeta">'+tally(inRow)+"</div></div>";
+        cols.forEach(function(l){
+          var all = inRow.filter(function(n){ return keyFor(n, dim) === l.key; });
+          var cut = limit(all.filter(visible).sort(byScore));
+          var zc = dim === "zone" ? ZC[l.key] : rzc;
+          html += '<div class="cell'+(cut.shown.length ? "" : " empty-cell")+
+            '" data-lane="'+l.key+'" data-group="'+r.key+'" style="--zc:'+zc+'">'+
+            '<div class="cellhead">'+esc(l.label)+"</div>"+
+            stackHTML(cut, all.length)+"</div>";
+        });
+      });
+    }
+    board.innerHTML = html;
+    var gb = document.getElementById("groupby");
+    if(gb) gb.textContent = grouped ? ("rows: "+(other === "zone" ? "zone" : "panel")) : "";
+    var ts = document.getElementById("topscope");
+    if(ts) ts.textContent = topN ? (grouped ? "per cell" : "per column") : "";
+    buildMatrix();
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll(".seg button"), function(b){
+    b.addEventListener("click", function(){
+      var sibs = b.parentNode.querySelectorAll("button");
+      Array.prototype.forEach.call(sibs, function(o){ o.setAttribute("aria-pressed", String(o === b)); });
+      if(b.dataset.dim) dim = b.dataset.dim;
+      if(b.dataset.filter) filter = b.dataset.filter;
+      saveView();
+      render();
+    });
+  });
+  (function(){
+    var box = document.getElementById("grouping");
+    box.checked = grouped;
+    box.addEventListener("change", function(){
+      grouped = box.checked;
+      saveView();
+      render();
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".seg button"), function(b){
+      if(b.dataset.filter) b.setAttribute("aria-pressed", String(b.dataset.filter === filter));
+      if(b.dataset.dim)    b.setAttribute("aria-pressed", String(b.dataset.dim === dim));
+    });
+    var tn = document.getElementById("topn");
+    tn.value = String(topN);
+    tn.addEventListener("change", function(){
+      topN = parseInt(tn.value, 10) || 0;
+      saveView();
+      render();
+    });
+  })();
+  // ---- CSV ---------------------------------------------------------
+  function toCSV(){
+    var head = ["id","zone","panel","cluster","idea","detail",
+                "purple_votes","red_votes","note_color","merged_with"];
+    var q = function(v){ return '"' + String(v == null ? "" : v).replace(/"/g,'""') + '"'; };
+    var zi = ZONES.map(function(z){ return z.key; });
+    var pi = PANELS.map(function(p){ return p.key; });
+    var lines = [head.join(",")];
+    NOTES.slice().sort(function(a,b){
+      return zi.indexOf(zoneOf(a)) - zi.indexOf(zoneOf(b))
+        || pi.indexOf(panelOf(a)) - pi.indexOf(panelOf(b))
+        || score(b) - score(a) || a.id.localeCompare(b.id);
+    }).forEach(function(n){
+      lines.push([n.id, zoneOf(n), panelOf(n), n.c, n.t, n.d,
+                  n.v, n.r, n.k, n.mt.join(" | ")].map(q).join(","));
+    });
+    return lines.join("\n");
+  }
+  (async function(){
+    var dl = null;
+    try { dl = await window.claude.use("downloads"); } catch(e){ dl = null; }
+    if(!dl) return;
+    var btn = document.getElementById("export");
+    btn.hidden = false;
+    btn.addEventListener("click", async function(){
+      try {
+        await dl.save({filename:"tllc-50th-ideation.csv", data:toCSV()});
+      } catch(e){ /* the viewer declined */ }
+    });
+  })();
+
+  render();
+})();
+</script>
+</body>
+</html>
